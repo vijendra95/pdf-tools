@@ -84,7 +84,7 @@ export default function Mp4ToWav() {
           >
             <div className="text-6xl mb-6">🎬</div>
             <button type="button" className="btn-primary mb-4">Select MP4 Video</button>
-            <p className="text-gray-400 text-lg mt-2">or drop MP4 file here</p>
+            <p className="text-gray-500 text-lg mt-2">or drop MP4 file here</p>
             <input
               ref={inputRef}
               type="file"

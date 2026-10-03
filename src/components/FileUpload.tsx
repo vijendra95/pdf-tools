@@ -62,7 +62,7 @@ export default function FileUpload({
         <button type="button" className="btn-primary mb-4">
           {label}
         </button>
-        <p className="text-gray-400 text-lg mt-2">{description}</p>
+        <p className="text-gray-500 text-lg mt-2">{description}</p>
         <input
           ref={inputRef}
           type="file"

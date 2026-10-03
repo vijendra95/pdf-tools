@@ -79,7 +79,7 @@ export default function Mp3ToWav() {
           >
             <div className="text-6xl mb-6">🎵</div>
             <button type="button" className="btn-primary mb-4">Select MP3 File</button>
-            <p className="text-gray-400 text-lg mt-2">or drop MP3 file here</p>
+            <p className="text-gray-500 text-lg mt-2">or drop MP3 file here</p>
             <input
               ref={inputRef}
               type="file"

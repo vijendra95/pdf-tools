@@ -252,7 +252,7 @@ export default function AudioConverter() {
           >
             <div className="text-6xl mb-6">🎵</div>
             <button type="button" className="btn-primary mb-4">Select File</button>
-            <p className="text-gray-400 text-lg mt-2">or drop your file here</p>
+            <p className="text-gray-500 text-lg mt-2">or drop your file here</p>
             <p className="text-gray-300 text-sm mt-2">
               Supports MP3, WAV, AAC, OGG, FLAC, M4A, OPUS, MP4, MKV, AVI, MOV
             </p>

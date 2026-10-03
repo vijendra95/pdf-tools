@@ -86,7 +86,7 @@ export default function Footer({ siteName = "PDF Tools" }: { siteName?: string }
             <Link href="/privacy" className="hover:text-white transition">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-white transition">Terms of Service</Link>
           </nav>
-          <p className="mt-3 text-gray-500 text-base">
+          <p className="mt-3 text-gray-400 text-base">
             © {new Date().getFullYear()} {siteName}. All PDF processing happens directly in your browser. Your files never leave your device.
           </p>
         </div>
