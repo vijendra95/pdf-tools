@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Footer() {
+export default function Footer({ siteName = "PDF Tools" }: { siteName?: string }) {
   return (
     <footer className="bg-gray-900 text-gray-300 mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
@@ -12,6 +12,8 @@ export default function Footer() {
               <li><Link href="/split-pdf" className="hover:text-white transition">Split PDF</Link></li>
               <li><Link href="/rotate-pdf" className="hover:text-white transition">Rotate PDF</Link></li>
               <li><Link href="/organize-pdf" className="hover:text-white transition">Organize PDF</Link></li>
+              <li><Link href="/remove-pages" className="hover:text-white transition">Remove Pages</Link></li>
+              <li><Link href="/extract-pages" className="hover:text-white transition">Extract Pages</Link></li>
               <li><Link href="/scan-to-pdf" className="hover:text-white transition">Scan to PDF</Link></li>
               <li><Link href="/compare-pdf" className="hover:text-white transition">Compare PDF</Link></li>
             </ul>
@@ -76,8 +78,16 @@ export default function Footer() {
             <span className="text-white font-extrabold text-xl">Tools</span>
             <span className="ml-2 text-gray-400">— Free Online PDF Tools</span>
           </p>
+          <nav aria-label="Footer" className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-base">
+            <Link href="/about" className="hover:text-white transition">About</Link>
+            <Link href="/blog" className="hover:text-white transition">Blog</Link>
+            <Link href="/contact" className="hover:text-white transition">Contact</Link>
+            <Link href="/faq" className="hover:text-white transition">FAQ</Link>
+            <Link href="/privacy" className="hover:text-white transition">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-white transition">Terms of Service</Link>
+          </nav>
           <p className="mt-3 text-gray-500 text-base">
-            All PDF processing happens directly in your browser. Your files never leave your device.
+            © {new Date().getFullYear()} {siteName}. All PDF processing happens directly in your browser. Your files never leave your device.
           </p>
         </div>
       </div>

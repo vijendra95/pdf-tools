@@ -44,6 +44,7 @@ export default function SignPDF() {
   useEffect(() => {
     try {
       const saved = localStorage.getItem("pdf-signers");
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       if (saved) setSavedSigners(JSON.parse(saved));
     } catch { /* ignore */ }
   }, []);
