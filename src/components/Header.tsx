@@ -32,12 +32,16 @@ export default function Header() {
             <Link href="/audio-converter" className="hover:text-purple-500 transition">
               Audio
             </Link>
+            <Link href="/blog" className="hover:text-red-500 transition">
+              Blog
+            </Link>
             <Link href="/#all-tools" className="bg-red-500 text-white px-5 py-2 rounded-full hover:bg-red-600 transition text-sm">
               All Tools
             </Link>
           </div>
 
           <button
+            aria-label="Open menu"
             className="md:hidden p-2"
             onClick={() => setMenuOpen(!menuOpen)}
           >
@@ -58,6 +62,7 @@ export default function Header() {
               { href: "/split-pdf", label: "Split PDF" },
               { href: "/compress-pdf", label: "Compress PDF" },
               { href: "/edit-pdf", label: "Edit PDF" },
+              { href: "/blog", label: "Blog" },
               { href: "/sign-pdf", label: "Sign PDF" },
               { href: "/rotate-pdf", label: "Rotate PDF" },
               { href: "/pdf-to-jpg", label: "PDF to JPG" },

@@ -85,7 +85,7 @@ export default function WavToMp3() {
           >
             <div className="text-6xl mb-6">🔊</div>
             <button type="button" className="btn-primary mb-4">Select WAV File</button>
-            <p className="text-gray-400 text-lg mt-2">or drop WAV file here</p>
+            <p className="text-gray-500 text-lg mt-2">or drop WAV file here</p>
             <input
               ref={inputRef}
               type="file"

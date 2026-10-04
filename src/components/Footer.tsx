@@ -1,10 +1,10 @@
 import Link from "next/link";
 
-export default function Footer() {
+export default function Footer({ siteName = "PDF Tools" }: { siteName?: string }) {
   return (
     <footer className="bg-gray-900 text-gray-300 mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
           <div>
             <h3 className="text-white font-bold text-lg mb-5">Organize</h3>
             <ul className="space-y-3 text-base">
@@ -12,6 +12,10 @@ export default function Footer() {
               <li><Link href="/split-pdf" className="hover:text-white transition">Split PDF</Link></li>
               <li><Link href="/rotate-pdf" className="hover:text-white transition">Rotate PDF</Link></li>
               <li><Link href="/organize-pdf" className="hover:text-white transition">Organize PDF</Link></li>
+              <li><Link href="/remove-pages" className="hover:text-white transition">Remove Pages</Link></li>
+              <li><Link href="/extract-pages" className="hover:text-white transition">Extract Pages</Link></li>
+              <li><Link href="/scan-to-pdf" className="hover:text-white transition">Scan to PDF</Link></li>
+              <li><Link href="/compare-pdf" className="hover:text-white transition">Compare PDF</Link></li>
             </ul>
           </div>
           <div>
@@ -23,6 +27,8 @@ export default function Footer() {
               <li><Link href="/pdf-to-excel" className="hover:text-white transition">PDF to Excel</Link></li>
               <li><Link href="/pdf-to-ppt" className="hover:text-white transition">PDF to PowerPoint</Link></li>
               <li><Link href="/html-to-pdf" className="hover:text-white transition">HTML to PDF</Link></li>
+              <li><Link href="/pdf-to-pdfa" className="hover:text-white transition">PDF to PDF/A</Link></li>
+              <li><Link href="/pdf-to-markdown" className="hover:text-white transition">PDF to Markdown</Link></li>
             </ul>
           </div>
           <div>
@@ -33,6 +39,9 @@ export default function Footer() {
               <li><Link href="/watermark-pdf" className="hover:text-white transition">Watermark</Link></li>
               <li><Link href="/page-numbers" className="hover:text-white transition">Page Numbers</Link></li>
               <li><Link href="/crop-pdf" className="hover:text-white transition">Crop PDF</Link></li>
+              <li><Link href="/pdf-forms" className="hover:text-white transition">PDF Forms</Link></li>
+              <li><Link href="/repair-pdf" className="hover:text-white transition">Repair PDF</Link></li>
+              <li><Link href="/ocr-pdf" className="hover:text-white transition">OCR PDF</Link></li>
             </ul>
           </div>
           <div>
@@ -41,6 +50,14 @@ export default function Footer() {
               <li><Link href="/sign-pdf" className="hover:text-white transition">Sign PDF</Link></li>
               <li><Link href="/protect-pdf" className="hover:text-white transition">Protect PDF</Link></li>
               <li><Link href="/unlock-pdf" className="hover:text-white transition">Unlock PDF</Link></li>
+              <li><Link href="/redact-pdf" className="hover:text-white transition">Redact PDF</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-white font-bold text-lg mb-5">Intelligence</h3>
+            <ul className="space-y-3 text-base">
+              <li><Link href="/summarize-pdf" className="hover:text-white transition">Summarize PDF</Link></li>
+              <li><Link href="/translate-pdf" className="hover:text-white transition">Translate PDF</Link></li>
             </ul>
           </div>
           <div>
@@ -61,8 +78,16 @@ export default function Footer() {
             <span className="text-white font-extrabold text-xl">Tools</span>
             <span className="ml-2 text-gray-400">— Free Online PDF Tools</span>
           </p>
-          <p className="mt-3 text-gray-500 text-base">
-            All PDF processing happens directly in your browser. Your files never leave your device.
+          <nav aria-label="Footer" className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-base">
+            <Link href="/about" className="hover:text-white transition">About</Link>
+            <Link href="/blog" className="hover:text-white transition">Blog</Link>
+            <Link href="/contact" className="hover:text-white transition">Contact</Link>
+            <Link href="/faq" className="hover:text-white transition">FAQ</Link>
+            <Link href="/privacy" className="hover:text-white transition">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-white transition">Terms of Service</Link>
+          </nav>
+          <p className="mt-3 text-gray-400 text-base">
+            © {new Date().getFullYear()} {siteName}. All PDF processing happens directly in your browser. Your files never leave your device.
           </p>
         </div>
       </div>

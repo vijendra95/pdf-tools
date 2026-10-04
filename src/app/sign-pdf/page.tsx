@@ -44,6 +44,7 @@ export default function SignPDF() {
   useEffect(() => {
     try {
       const saved = localStorage.getItem("pdf-signers");
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       if (saved) setSavedSigners(JSON.parse(saved));
     } catch { /* ignore */ }
   }, []);
@@ -60,8 +61,8 @@ export default function SignPDF() {
     const ab = await f.arrayBuffer();
     setPdfBytes(ab);
 
-    const pdfjsLib = await import("pdfjs-dist");
-    pdfjsLib.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
+    const pdfjsLib = await import("pdfjs-dist/legacy/build/pdf.mjs");
+    pdfjsLib.GlobalWorkerOptions.workerSrc = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/pdf.worker.min.mjs`;
     const pdf = await pdfjsLib.getDocument({ data: ab }).promise;
     const imgs: string[] = [];
     for (let i = 1; i <= pdf.numPages; i++) {
